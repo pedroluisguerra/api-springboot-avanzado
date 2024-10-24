@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.keepcoding.api.entity.Customer;
+import com.keepcoding.api.entity.Region;
 import com.keepcoding.api.repository.CustomerRepository;
 import com.keepcoding.api.service.CustomerService;
 
@@ -42,6 +43,13 @@ public class CustomerServiceImpl implements CustomerService{
 	public void customerDelete(Long id) {
 		customerRepository.deleteById(id);
 		
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Region> AllRegions() {
+		
+		return customerRepository.findAllRegions();
 	}
 
 }

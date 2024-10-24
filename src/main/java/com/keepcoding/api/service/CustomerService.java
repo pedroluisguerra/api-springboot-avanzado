@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.keepcoding.api.entity.Customer;
+import com.keepcoding.api.entity.Region;
 
 public interface CustomerService {
 	
@@ -15,5 +16,7 @@ public interface CustomerService {
 	public Customer customerSave(Customer customer);
 	
 	public void customerDelete(Long id);
+	
+	public List<Region> AllRegions();
 
 }
