@@ -50,7 +50,7 @@ public class CustomerController {
 			response.put("mensaje", "No hay registros en esta base de datos actualmente");
 			return ResponseEntity.status(HttpStatus.OK).body(response);
 		}
-		// return service.allCustomers();
+
 	}
 	
 	@GetMapping("/customers/{id}")
